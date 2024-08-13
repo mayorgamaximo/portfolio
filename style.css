@@ -1,16 +1,23 @@
 *{
     margin: 0%;
     padding: 0%;
-    font-family: 'Montserrat', sans-serif;
+    
 }
 html{
     box-sizing: border-box;
     
 }
+
+@font-face {
+    font-family: "Hagrid.ttf";
+    src: url('./fonts/Hagrid.ttf') format('truetype');
+}
+
 body{
     background-color: #fff;
     background: radial-gradient(ellipse at bottom,#1b2735 0%,#090a0f 100%);
     overflow-x: hidden;
+    font-family: "Hagrid";
 }
 /*fondo animado*/
 .container {
@@ -47,7 +54,7 @@ body{
   }
 /*nav*/
 nav{
-    background: linear-gradient(black 0%,rgba(0, 0, 0, 0.719) 100%);
+    background: linear-gradient(black 0%,#000000b7 100%);
     position: fixed;
     height: 12vh;
     width: 100vw;
@@ -109,10 +116,37 @@ nav ul li a{
     flex-direction: column;
 }
 
-
-.titulo{
-    color: rgba(57, 55, 95, 0.836);
+.text{
+    background-color: #1b273544;
+    backdrop-filter: blur(2px);
 }
+
+#titulo {
+    color: rgb(65, 65, 214); /* Azul inicial */
+    animation: colorChange 5s infinite linear;
+  }
+  
+  @keyframes colorChange {
+    0% {
+      color: rgb(62, 62, 180); /* Azul clásico */
+    }
+    25% {
+      color: rgb(65, 105, 225); /* Azul medianoche */
+    }
+    50% {
+      color: rgb(23, 101, 189); /* Azul cielo */
+    }
+    75% {
+      color: rgb(2, 175, 175); /* Azul turquesa */
+    }
+    100% {
+      color: rgb(11, 11, 165); /* Azul clásico */
+    }
+}
+
+
+
+
 .perfil_img{
     height: 40rem;
 }
@@ -126,7 +160,11 @@ nav ul li a{
     z-index: 1;
 }
 .grid-item{
-    width: 100%;
+    width: 40vw;
+    height: 50vh;
+}
+.text{
+    margin-top: 10vh;
 }
 .grid-item h1{
     margin-top: 10%;
@@ -135,22 +173,22 @@ nav ul li a{
     font-weight: 900;
     
     color: #c9c6c6d5;
-    font-family: 'Montserrat', sans-serif;
+    
 }
 
 .grid-item h2{
     font-size: 1.8em;
     margin-left: 15%;
-    font-family: 'Montserrat', sans-serif;
+    
 }
 .grid-item h3{
-    color: rgb(91, 91, 138);
+    color: rgb(25, 105, 196);
     font-size: 1.8em;
     margin-top: 4%;
     margin-bottom: 3%;
     margin-left: 15%;
     width: 60%;
-    font-family: 'Montserrat', sans-serif;
+   
 }
 
 .perfil_img{
@@ -446,6 +484,7 @@ footer h3{
     color: white;
     font-size: 25px;
 }
+
 a{
     text-decoration: none;
 }
@@ -478,6 +517,7 @@ a:hover{
     }
     .grid-item .text{
         width: 0vw;
+        
     }
     .item{
         margin-top: 50px;
